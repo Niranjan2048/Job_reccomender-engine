@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login & Registration Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="cont">
+    <div class="form sign-in">
+      <h2>Sign Up</h2>
+      <form action="/postsignIn/" method="post">
+        {% csrf_token %}
+        <label>
+          <span>Email Address</span>
+          <input type="email" id="Email" name="email">
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" id="Password" name="pass">
+        </label>
+        <button class="submit" type="submit" value="SignIn">Login</button>
+      </form>
+      <center><a class="forgot-pass" href="/reset/">Forgot Password ?</a></center>
+
+
+      <div class="social-media">
+        <ul>
+          <li><img src="{% static 'images/facebook.png' %}"></li>
+          <li><img src="{% static 'images/twitter.png' %}"></li>
+          <li><img src="{% static 'images/linkedin.png' %}"></li>
+          <li><img src="{% static 'images/instagram.png' %}"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img-text m-up">
+          <h2>New here?</h2>
+          <p>Sign up and discover great amount of new opportunities!</p>
+        </div>
+        <div class="img-text m-in">
+          <h2>One of us?</h2>
+          <p>If you already has an account, just sign in. We've missed you!</p>
+        </div>
+        <div class="img-btn">
+          <span class="m-up">Register</span>
+          <span class="m-in">Login</span>
+        </div>
+      </div>
+      <div class="form sign-up">
+        <h2>Register</h2>
+        <form action="/postsignUp/" method="post">
+          {% csrf_token %}
+          <label>
+            <span>your name</span>
+            <input type="name" id="Username" name="name" placeholder="Your Name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" id="Email" name="email" placeholder="Your Email Id">
+          </label>
+          <label for="password">
+            <span>Password</span>
+            <input type="password" id="Password" name="pass" placeholder="Password"><br>
+            <!-- RepeatPassword: -->
+            <label for="confirm_password">Confirm Password</label>
+            <input type="password" id="confirm_password" name="pass-repeat" placeholder=" Repeat Password">
+          </label>
+
+          <input type="submit" class="submit" value="SignUp"><br><br
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="{% static 'script.js' %}"></script>
+</body>
+
+</html>
