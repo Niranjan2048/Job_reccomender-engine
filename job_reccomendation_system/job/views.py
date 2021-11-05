@@ -1,17 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import pyrebase
+import requests,webbrowser
+import bs4
+from bs4 import BeautifulSoup
 
-def home(request):
-    return render(request,"index.html")
+
 
 
 #COde here for signin
 
-
- 
- 
-# For Firebase JS SDK v7.20.0 and later, measurementId is optional
 config = {
   "apiKey": "AIzaSyCymQui1BmSZlUQcbz5EJzMzFVZB0CtUtk",
   "authDomain": "job-recommender-d701e.firebaseapp.com",
@@ -44,7 +42,7 @@ def postsignIn(request):
         return render(request,"Login.html",{"message":message})
     session_id=user['idToken']
     request.session['uid']=str(session_id)
-    return render(request,"Home.html",{"email":email})
+    return render(request,"result.html",{"email":email})
  
 def logout(request):
     try:
@@ -79,4 +77,21 @@ def postReset(request):
     except:
         message  = "Something went wrong, Please check the email you provided is registered or not"
         return render(request, "Reset.html", {"msg":message})
-
+def home(request):
+    return render(request,"index.html")
+def opentabs(request):
+    res=requests.get("https://www.google.com/search?q="+'niranjan')
+    #.join(sys.argv[1:]))
+    #res.raise_for_status()
+    soup=bs4.BeautifulSoup(res.text,'html.parser')
+    linkElems=soup.select('.r a')
+    numOpen=min(5,len(linkElems))
+    for link in linkElems[:numOpen]:
+        print(link.get('href'))
+        actualLink=link.get('href')
+        webbrowser.open(actualLink)
+    return render(request,"result.html")    
+        #webbrowser.open(link.get('href'))
+    # for i in range(numOpen):
+    #     webbrowser.open_new_tab('https://www.google.com'+linkElems[i].get('href'))
+    # return render(request,"result.html")

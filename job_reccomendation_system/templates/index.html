@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -74,13 +75,21 @@
             <input type="password" id="confirm_password" name="pass-repeat" placeholder=" Repeat Password">
           </label>
 
-          <input type="submit" class="submit" value="SignUp"><br><br
+          <button type="submit" class="submit" value="SignUp">Register lmao</button>
 
         </form>
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="{% static 'script.js' %}"></script>
+  
+  <script >
+    document.querySelector('.img-btn').addEventListener('click', function()
+	{
+		document.querySelector('.cont').classList.toggle('s-signup')
+	}
+);
+  </script>
+
 </body>
 
 </html>
