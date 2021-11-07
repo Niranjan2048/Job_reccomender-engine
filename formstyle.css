@@ -1,0 +1,163 @@
+*
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+#bg
+{
+    background-image: url(bg5.jpg);
+    background-size: cover ;
+}
+.container{
+    width:700px;
+    height:400px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    margin: 12% auto;
+    overflow: hidden;
+    
+}
+
+h3{
+    text-align: center;
+    /* margin-right: 200px; */
+    margin-bottom: 40px;
+}
+h4{
+    text-align: justify;
+    margin-bottom: 0.5px;
+}
+
+.container form
+{
+   width: 330px;
+   position: absolute;
+   top: 100px;
+   left: 40px;
+   transition: 1s;
+    
+}
+form input{
+    width: 100%;
+    padding: 12px 5px;
+    margin:6px 0;
+    border:0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.btn-one
+{
+
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+form button
+{
+    width: 110px;
+    height: 35px;
+    border-radius: 50px;
+    margin: 0 10px;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    color: white;
+    border:0px;
+    outline: none;
+    cursor: pointer;
+
+}
+
+#form2
+{
+    left: 850px;
+}
+
+#form3
+{
+    left: 850px;
+}
+#form4
+{
+    left: 850px;
+}
+#form5
+{
+    left: 850px;
+}
+
+.step-row
+{
+    width: 700px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px black;
+    position: relative;
+}
+
+.step-col
+{
+    width:140px;
+    text-align: center;
+    position: relative;
+
+}
+
+#progress
+{
+    position: absolute;
+    width: 140px;
+    height: 100%;
+    background: linear-gradient(to right, #1fd1f9 , #b621fe );
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+#progress::after
+{
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    right: -20px;
+    top:0;
+    border-left: 20px solid #b621fe;
+}
+
+#state{
+    width: 15rem;
+    height: 2rem;
+}
+
+#district{
+    width: 15rem;
+    height: 2rem;
+}
+
+.main__img--card {
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    margin-left: 450px;
+    align-items: right;
+    height: 280px;
+    width: 250px;
+    display: flex;
+    justify-content: end;
+    color: #fff;
+    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+    cursor: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+  }
+
+  

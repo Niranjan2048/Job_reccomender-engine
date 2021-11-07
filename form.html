@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Recommender</title>
+    <link rel="stylesheet" href="formstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+</head>
+<body id="bg">
+    <div class="container">
+      <div class="step-row">
+
+        <div id="progress"></div>
+
+        <div class="step-col"><small>STEP 1</small></div>
+        <div class="step-col"><small>STEP 2</small></div>
+        <div class="step-col"><small>STEP 3</small></div>
+        <div class="step-col"><small>STEP 4</small></div>
+        <div class="step-col"><small>STEP 5</small></div>
+ 
+      </div>
+
+
+      <div 
+      class="main__img--card"><img src="undraw_Job_hunt_re_q203.png" alt="<i class= "fas fa-layer-group"></i>
+      </div> 
+      <!-- first page -->
+      <form id="form1">
+        <h3> <u>PERSONAL DETAILS</u></h3>
+        <div>
+        <h4>Enter Your First Name:</h4>
+        <input type="text" placeholder="First Name" required>
+        </div>
+        <div>
+          <br>
+        <h4>Enter Your Last Name:</h4>
+        <input type="text" placeholder="Last Name" required>
+        </div>
+
+        <div class="btn-one">
+          <button type="button" id="next1">Next</button>
+        </div>
+      </form>
+    
+<!--  second page -->
+      <form id="form2">
+        <h3> <u>CONTACT DETAILS</u></h3>
+        <div class="q2">
+          <h4>Can you provide us your Email-id?</h4>
+          <input type="text" placeholder="Enter Your Email id here" required>
+          <br>
+          <br>
+          <div>
+            <h4>Can you provide us your Mobile Number:</h4>
+            <input type="text" placeholder="Mobile Number" required>
+            </div>
+          
+        </div>
+        <div class="btn-one">
+          <button type="button" id="back1">Back</button>
+          <button type="button" id="next2">Next</button>
+        </div>
+      </form>
+
+      <!-- third page -->
+      <form id="form3">
+        <h3> <u> Industry Experience</u></h3>
+        <div>
+            <h4>Select the industry you seek job in? </h4>
+            <input list="industry" name="getindustry" id="getindustry" placeholder="--Select Industry you seek--" required>
+
+            <datalist id="industry">
+              <option value="IT-Software">
+              <option value="Software Services">
+              <option value="Recruitment">
+              <option value="Staffing">
+              <option value="BPO/ Call Centre ">
+              <option value="Call Centre">
+              <option value="ITeS">
+              <option value="Banking">
+              <option value="Financial Services">
+              <option value="Broking">
+              <option value="Education"></option>
+              <option value="Teaching"></option>
+              <option value="Training"></option>
+              <option value="Medical"></option>
+              <option value="Healthcare"></option>
+              <option value="Hospitals"></option>
+              <option value="Internet"></option>
+              <option value="Ecommerce"></option>
+              <option value="Construction"></option>
+              <option value="Engineering"></option>
+              <option value="Cement"></option>
+              <option value="Metals"></option>
+              <option value="Strategy"></option>
+              <option value="Management Consulting Firms"></option>
+              <option value="Other"></option>
+              <option value="Travel "></option>
+              <option value="Hotels "></option>
+              <option value="Restaurants"></option>
+              <option value="Airlines "></option>
+              <option value="Railways"></option>
+              <option value="Automobile"></option>
+              <option value="Auto Anciliary"></option>
+              <option value="Auto Components"></option>
+              <option value="Pharma"></option>
+              <option value="Biotech"></option>
+              <option value="Clinical Research"></option>
+              <option value="Media"></option>
+              <option value="Entertainment"></option>
+              <option value="Internet"></option>
+              <option value="Industrial Products"></option>
+              <option value="Heavy Machinery"></option>
+              <option value="Advertising"></option>
+              <option value="PR"></option>
+              <option value="MR"></option>
+              <option value="Event Management"></option>
+              <option value="Insurance"></option>
+              <option value="Real Estate"></option>
+              <option value="Property"></option>
+              <option value="Accounting"></option>
+              <option value="Finance"></option>
+              <option value="Retail"></option>
+              <option value="Wholesale"></option>
+              <option value="FMCG"></option>
+              <option value="Foods"></option>
+              <option value="Beverage"></option>
+              <option value="Oil and Gas"></option>
+              <option value="Energy"></option>
+              <option value="Power"></option>
+              <option value="Infrastructure"></option>
+              <option value="Telcom"></option>
+              <option value="ISP"></option>
+              <option value="IT-Hardware & Networking"></option>
+              <option value="KPO"></option>
+              <option value="Research"></option>
+              <option value="Analytics"></option>
+              <option value="Semiconductors"></option>
+              <option value="Electronics"></option>
+              <option value="Courier"></option>
+              <option value="Transportation"></option>
+              <option value="Freight "></option>
+              <option value="Warehousing"></option>
+              <option value="PetroChemical"></option>
+              <option value="Chemicals"></option>
+              <option value="Plastic"></option>
+              <option value="Rubber"></option>
+              <option value="Consumer Electronics"></option>
+              <option value="Appliances"></option>
+              <option value="Durables"></option>
+              <option value="Textiles"></option>
+              <option value="Garments"></option>
+              <option value="Accessories"></option>
+              <option value="Architecture"></option>
+              <option value="Interior Design"></option>
+              <option value="Electricals"></option>
+              <option value="Switchgears"></option>
+              <option value="NGO"></option>
+              <option value="Social Services"></option>
+              <option value="Regulators"></option>
+              <option value="Industry Associations"></option>
+              <option value="Printing"></option>
+              <option value="Packaging"></option>
+              <option value="Publishing"></option>
+              <option value="Agriculture"></option>
+              <option value="Dairy"></option>
+              <option value="Wellness "></option>
+              <option value="Fitness "></option>
+              <option value="Sports"></option>
+              <option value="Beauty"></option>
+              <option value="Export"></option>
+              <option value="Import"></option>
+              <option value="Aviation"></option>
+              <option value="Aerospace"></option>
+              <option value="Aeronautical"></option>
+              <option value="Office Equipment"></option>
+              <option value="Automation"></option>
+              <option value="Water Treatment"></option>
+              <option value="Waste Management"></option>
+              <option value="Facility Management"></option>
+              <option value="Animation"></option>
+              <option value="Gaming"></option>
+              <option value="Iron and Steel"></option>
+              <option value="Heat Ventilation, "></option>
+              <option value="Air Conditioning"></option>
+              <option value="Internet / Ecommerce"></option>
+              <option value="Gems"></option>
+              <option value="Jewellery"></option>
+              <option value="Shipping"></option>
+              <option value="Marine"></option>
+              <option value="Ceramics"></option>
+              <option value="Sanitary ware"></option>
+              <option value="Medical Devices / Equipments"></option>
+              <option value="Security"></option>
+              <option value="Law Enforcement"></option>
+              <option value="Food Processing"></option>
+              <option value="Legal"></option>
+            </datalist>
+            <br>
+            <br>
+            <h4>Function u have in yours industry?</h4>
+            <input list="Func" name="getFunction" id="getFunction" placeholder="--Select Function in Industry--" required>
+
+            <datalist id="Func">
+              <option value="Marketing">
+              <option value="Advertising ">
+              <option value="MR">
+              <option value="PR">
+              <option value="Media Planning">
+              <option value="Sales">
+              <option value="Retail">
+              <option value="Business Development">
+              <option value="Engineering Design">
+              <option value="R&D">
+              <option value="Application Programming">
+              <option value="Maintenance">
+              <option value="QA & Testing">
+              <option value="ITES">
+              <option value="BPO">
+              <option value="KPO">
+              <option value="LPO">
+              <option value="Customer Service">
+              <option value="Operations">
+              <option value="Strategy ">
+              <option value="Management ">
+              <option value="Consulting ">
+              <option value="Corporate Planning">
+              <option value="eCommerce">
+              <option value="Internet Technologies">
+              <option value="Accounts ">
+              <option value="Finance ">
+              <option value="Tax ">
+              <option value="Company Secretary ">
+              <option value="Audit">
+              <option value="Financial Services ">
+              <option value="Banking ">
+              <option value="Investments ">
+              <option value="Insurance">
+              <option value="DBA ">
+              <option value="Datawarehousing">
+              <option value="Network Administration">
+              <option value="Security">
+              <option value="Purchase / Logistics / Supply Chain">
+              <option value="Other">
+              <option value="IT Hardware ">
+              <option value="Technical Support">
+              <option value="Telecom Engineering">
+              <option value="Journalism ">
+              <option value="Editing ">
+              <option value="Content">
+              <option value="HR">
+              <option value="Recruitment">
+              <option value="Administration">
+              <option value="IR">
+              <option value="Architecture ">
+              <option value="Interior Design">
+              <option value="Embedded ">
+              <option value="EDA">
+              <option value="VLSI">
+              <option value="ASIC">
+              <option value="Chip Design">
+              <option value="Hotels ">
+              <option value="Restaurants">
+              <option value="Production ">
+              <option value="Manufacturing ">
+              <option value="Design ">
+              <option value="Creative">
+              <option value="User Experience">
+              <option value="Analytics & Business Intelligence">
+              <option value="Teaching ">
+              <option value="Education ">
+              <option value="Training ">
+              <option value="Counselling">
+              <option value="Medical ">
+              <option value="Healthcare ">
+              <option value="R&D">
+              <option value="Pharmaceuticals ">
+              <option value="Biotechnology">
+              <option value="System Programming">
+              <option value="Telecom Software">
+              <option value="ERP ">
+              <option value="CRM">
+              <option value="Supply Chain">
+              <option value="Logistics ">
+              <option value="Purchase ">
+              <option value="Materials">
+              <option value="Site Engineering ">
+              <option value="Project Management">
+              <option value="Travel ">
+              <option value="Tours ">
+              <option value="Ticketing ">
+              <option value="Airlines">
+              <option value="Legal ">
+              <option value="Regulatory">
+              <option value="Intellectual Property">
+              <option value="Export ">
+              <option value="Import ">
+              <option value="Merchandising">
+              <option value="Systems ">
+              <option value="EDP ">
+              <option value="MIS">
+              <option value="Client/Server Programming">
+              <option value="Fashion Designing ">
+              <option value="Merchandising">
+              <option value="Executive Assistant ">
+              <option value="Front Office ">
+              <option value="Data Entry">
+              <option value="Middleware">
+              <option value="Mainframe">
+              <option value="TV ">
+              <option value="Films ">
+              <option value="Production ">
+              <option value="Broadcasting">
+              <option value="CSR & Sustainability">
+
+            </datalist>
+
+        </div>
+        <div class="btn-one">
+          <button type="button" id="back2">Back</button>
+          <button type="button" id="next3">Next</button>
+        </div>
+      </form>
+
+      <!-- fourth page -->
+      <form id="form4">
+        <h3> <u> SKILLS </u></h3>
+        <div>
+          <h4>List the skills u possess related to ur field?</h4>
+          <input list="skills" name="getSkills" id="getSkills"" placeholder="format must be like  (Eg. python| java| ruby)" required>
+
+          <datalist id="skills">
+            <option value="python">
+            <option value="digital marketing">
+            <option value="java">
+            <option value="social media">
+          </datalist>
+          <br>
+          <br>
+          <h4>Role Category?</h4>
+          <input list="RoleC" name="getRole" id="getRole" placeholder="--Select role category--" required>
+
+          <datalist id="RoleC">
+            <option value="Advertising">
+            <option value="Retail Sales">
+            <option value="R&D">
+            <option value="Admin/Maintenance/Security/Datawarehousing">
+            <option value="Programming & Design">
+            <option value="Institutional Sales">
+            <option value="Voice">
+            <option value="Corporate Planning/Consulting/Strategy">
+            <option value="Operations">
+            <option value="Online/Digital Marketing">
+            <option value="Engineering Design">
+            <option value="Accounts">
+            <option value="Retail/Personal Banking">
+            <option value="QA/Testing/Documentation">
+            <option value="Project Management">
+            <option value="Logistics">
+            <option value="Technical Support">
+            <option value="Senior Management">
+            <option value="Content Development">
+            <option value="HR/ Recruitment / IR">
+            <option value="Corporate Sales">
+            <option value="Architectural Services">
+            <option value="Front Office/Customer Care">
+            <option value="Production/Manufacturing/Maintenance">
+            <option value="Creative">
+            <option value="Channel Sales">
+            <option value="Sales Support">
+            <option value="System Design/Implementation/ERP/CRM">
+            <option value="Back Office/Web/Transaction Processing">
+            <option value="Quality">
+            <option value="Analytics & BI">
+            <option value="Other">
+            <option value="Finance/Audit">
+            <option value="Public Relations">
+            <option value="University Level">
+            <option value="Drug Regulatory Affairs/Documentation">
+            <option value="Teachers">
+            <option value="Food & Beverage">
+            <option value="Production/Merchandising/Business Development">
+            <option value="Administration/Facility Management">
+            <option value="Purchase/Material Management">
+            <option value="Training">
+            <option value="Medical Professional">
+            <option value="Journalist/Writer">
+            <option value="Marketing">
+            <option value="General Insurance">
+            <option value="Safety/Health/Environment">
+            <option value="Ticketing/Travel/Documentation">
+            <option value="Site Engineering">
+            <option value="Housekeeping">
+            <option value="Pre Sales">
+            <option value="Investment Banking">
+            <option value="Mutual Funds/Fund Management/Asset Management">
+            <option value="Financial Services/Stock Broking">
+            <option value="Documentation/Shipping">
+            <option value="Interior Design">
+            <option value="Marketing Research">
+            <option value="Life Insurance/Financial Services">
+            <option value="Corporate Banking">
+            <option value="Designer">
+            <option value="Production/Technical">
+            <option value="After Sales Service">
+            <option value="Operations/Processes/Finance/Legal">
+            <option value="IT Hardware">
+            <option value="Treasury">
+            <option value="">
+            <option value="">
+            <option value="">
+            <option value="">
+            <option value="">
+            <option value="">
+            <option value="">
+
+            </datalist>
+      </div>
+
+        <div class="btn-one">
+          <button type="button"id="back3">Back</button>
+          <button type="button" id="next4">Next</button>
+        </div>
+      </form>
+
+      <!-- fourth page -->
+      <form id="form5">
+        <h3> <u> LOCATION</u></h3>
+        <div><h4>State:</h4>
+          <select id="state">
+          </select>
+        </div>
+        <br>
+        <br>
+        <div>
+        <h4>District:</h4>
+         <select id="district">
+         </select>
+      </div>
+
+        <div class="btn-one">
+          <button type="button" id="back4">Back</button>
+          <button type="button" id="submit1">Submit</button>
+        </div>
+      </form>
+      
+      
+    </div>
+      
+<script src="jquery-2.2.4.min.js"></script>
+
+<script>
+  var form1 = document.getElementById('form1');
+  var form2 = document.getElementById('form2');
+  var form3 = document.getElementById('form3');
+  var form4 = document.getElementById('form4');
+  var form5 = document.getElementById('form5');
+
+  var next1 = document.getElementById('next1');
+  var next2 = document.getElementById('next2');
+  var next3 = document.getElementById('next3');
+  var next4 = document.getElementById('next4');
+
+  var back1 = document.getElementById('back1');
+  var back2 = document.getElementById('back2');  var back3 = document.getElementById('back3');
+  var back4 = document.getElementById('back4');
+
+  var progress = document.getElementById
+  ('progress');
+
+  var bg = document.getElementById
+  ('bg');
+
+  next1.onclick = function()
+  {
+    form1.style.left = "-850px";
+    form2.style.left = "40px";
+    progress.style.width = "280px";
+    
+  }
+
+  back1.onclick = function()
+  {
+    form1.style.left = "40px";
+    form2.style.left = "850px";
+    progress.style.width = "140px";
+
+  }
+
+  next2.onclick = function()
+  {
+    form2.style.left = "-850px";
+    form3.style.left = "40px";
+    progress.style.width = "420px";
+
+  }
+
+  back2.onclick = function()
+  {
+    form2.style.left = "40px";
+    form3.style.left = "850px";
+    progress.style.width = "280px";
+
+  }
+  
+  next3.onclick = function()
+  {
+    form3.style.left = "-850px";
+    form4.style.left = "40px";
+    progress.style.width = "560px";
+
+  }
+
+  back3.onclick = function()
+  {
+    form3.style.left = "40px";
+    form4.style.left = "850px";
+    progress.style.width = "420px";
+
+  }
+
+  next4.onclick = function()
+  {
+    form4.style.left = "-850px";
+    form5.style.left="40px";
+    progress.style.width = "700px";
+
+  }
+
+  back4.onclick = function()
+  {
+    form4.style.left = "40px";
+    form5.style.left = "850px";
+    progress.style.width = "560px";
+
+  }
+
+  $(function(){
+var stateOptions;
+
+			$.getJSON('indianStates.json',function(result){
+			$.each(result, function(stateCode,stateName) {
+				//<option value='stateCode'>stateName</option>
+				stateOptions+="<option value='"
+				+stateCode+
+				"'>"
+				+stateName+
+				"</option>";
+				 });
+				 $('#state').html(stateOptions);
+			});
+		}
+	);
+	var districtOptions;
+	$("#state").change(function(){
+	if($(this).val()=="MH"){
+			$.getJSON('MHDistricts.json',function(result){
+			$.each(result, function(i,district) {
+				//<option value='districtName'>districtName</option>
+				districtOptions+="<option value='"
+				+district.name+
+				"'>"
+				+district.name+
+				"</option>";
+				 });
+				 $('#district').html(districtOptions);
+			});
+		}
+	});
+
+</script>
+
+
+</body>
+
+</html>
